@@ -15,7 +15,8 @@ some of the concepts in Elixir.
 ## Pattern Matching
 
 Pattern Matching is one of my favorite Elixir features. Let's take a
-look...
+look. (using an [Elixir
+Map](http://elixir-lang.org/getting_started/7.html#7.2-maps)
 
 ```elixir
 %{foo: bar} = %{foo: "baz"}
@@ -34,7 +35,7 @@ equal to the right-hand side. Through pattern matching the variable
 any depth:
 
 ```elixir
-[foo, bar, [baz]] = [1, 2, [3]
+[foo, bar, [baz]] = [1, 2, [3]]
 ```
 
 here `foo` and `bar` have the same value from the previous example but
@@ -87,7 +88,7 @@ def foo(a, b, c) do
 end
 ```
 
-The first question Ruby devs have is *why are there three of the same
+The first question Ruby devs have is *why are there three functions of the same
 name?* In Elixir you can define multiple functions of the same name as
 long as the function signatures are unique. Functions are matched
 against the values passed in. So `foo(:something, 2, 3)` would match the
@@ -97,8 +98,9 @@ functions are defined.
 
 Now our functions are concise, and focused on the very specific
 behavior. The condition is obfuscated through the pattern matching but
-this is a common pattern in Elixir so should be embrassed. The pattern
-matching can be more complex:
+this is a common design pattern in Elixir so it should be embrassed.
+
+The pattern matching can be more complex:
 
 ```elixir
 def foo(%{foo: bar}, "baz") do
