@@ -22,7 +22,7 @@ look...
 ```
 
 The above is matching a pattern. Don't think of `=` as assignment, you
-should think of `=` as *equality*. The left-hand side of the operand is
+should think of `=` as *equality*. The left-hand side of the `=` is
 equal to the right-hand side. Through pattern matching the variable
 `bar` is assigned the value `"baz"`. Consider:
 
@@ -53,7 +53,7 @@ my_list = [1, 2, [3]]
 ```
 
 Now `my_list` greedily matched to the entire right-hand side of the
-operand. So why is this cool? Let's take a look at a Ruby method that
+`=`. So why is this cool? Let's take a look at a Ruby method that
 has some conditions:
 
 ```ruby
